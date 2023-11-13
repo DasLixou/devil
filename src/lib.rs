@@ -1,13 +1,20 @@
-#![warn(missing_docs)]
-//! Graph data structures
+#[macro_export]
+macro_rules! define_graph {
+    (
+        $(#[$outer:meta])*
+        $vis:vis graph $MyGraph:ident {
 
-/// All implemented algorithms for graphs
-pub mod algos;
-/// All errors that can occur when executing a graph operation
-pub mod error;
-/// The `Graph` trait and all graph implementations
-pub mod graphs;
-/// Helping `Iterator`s for graphs
-pub mod iters;
-/// Utils used by graphs
-pub mod utils;
+        }
+    ) => {
+        $(#[$outer])*
+        $vis struct $MyGraph {
+
+        }
+
+        impl $MyGraph {
+            pub fn new() -> Self {
+                Self { }
+            }
+        }
+    };
+}
