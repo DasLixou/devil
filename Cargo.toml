@@ -1,0 +1,11 @@
+[package]
+name = "devil"
+version = "0.1.0"
+edition = "2021"
+description = "Graph data structures"
+license = "MIT OR Apache-2.0"
+
+[dependencies]
+hashbrown = "0.13.1"
+slotmap = "1.0.6"
+thiserror = "1.0.38"
